@@ -8,5 +8,4 @@ acc_sec = "McSM0gDOJTs0g1w3kWmhvYYwbQmnKKwMn0vOimBFYjm5U"
 auth = tweepy.OAuthHandler(con_key, con_sec)
 auth.set_access_token(acc_tok, acc_sec)
 
-# get name, description, and blurb and pass into a DataFrame
 
