@@ -31,11 +31,3 @@ def get_name(content, i):
     character = temp_name[1].split('" data-click-type')[0]
     tweeted_chars.append(character)
     return character
-
-
-
-
-
-
-
-
