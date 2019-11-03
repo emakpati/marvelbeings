@@ -1,11 +1,14 @@
 import tweepy
+import pandas as pd
 
-con_key = "HZ2QPNKDcdfAbCLNfam8ycBmB"
-con_sec = "kY6cGyyNm6tAMTdDQbUqV2axItKyLRtdWSPpsMYjdBOacxW1Mx"
-acc_tok = "1065687766002855936-UfBZVgIXqA91X4RUOpgJ4YMkr1g2U9"
-acc_sec = "McSM0gDOJTs0g1w3kWmhvYYwbQmnKKwMn0vOimBFYjm5U"
+creds = pd.read_csv("/Users/Ekene/Desktop/current_proj/marvelbeings/twit_creds.csv")
+# Reading tokens and secrets from a local csv instead.
+con_key = creds.con_key[0]
+con_sec = creds.con_sec[0]
+acc_tok = creds.acc_tok[0]
+acc_sec = creds.acc_sec[0]
 
 auth = tweepy.OAuthHandler(con_key, con_sec)
 auth.set_access_token(acc_tok, acc_sec)
 
-
+api = tweepy.API(auth)
